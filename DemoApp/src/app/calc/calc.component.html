@@ -1,0 +1,32 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Role(disabled)</mat-label>
+        <input matInput disabled value="Healer">
+    </mat-form-field>
+
+    <p>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Crit</mat-label>
+            <input matInput type="number" [(ngModel)]="crit" id="crit" name="crit">
+            <mat-hint *ngIf="crit!==0" class="hint">over{{critThreshold()}}</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Det</mat-label>
+            <input matInput type="number" [(ngModel)]="det" id="det" name="det">
+            <mat-hint *ngIf="det!==0" class="hint">over{{detThreshold()}}</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>SS</mat-label>
+            <input matInput type="number" [(ngModel)]="ss" id="ss" name="ss">
+            <mat-hint *ngIf="ss!==0" class="hint">over{{ssThreshold()}}</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>DH</mat-label>
+            <input matInput type="number" [(ngModel)]="dh" id="dh" name="dh">
+            <mat-hint *ngIf="dh!==0" class="hint">over{{dhThreshold()}}</mat-hint>
+        </mat-form-field>
+    </p>
+</form>
